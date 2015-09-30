@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DDEF7D5-8921-489F-A590-0CC5A4FF9993}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeChatUtil</RootNamespace>
+    <AssemblyName>WeChatUtil</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\AccessToken.cs" />
+    <Compile Include="Models\CData.cs" />
+    <Compile Include="Models\JsApiTicket.cs" />
+    <Compile Include="Models\MaterialArticle.cs" />
+    <Compile Include="Models\OAuthAccessToken.cs" />
+    <Compile Include="Models\SignPackage.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\WeChatCustomService.cs" />
+    <Compile Include="Models\WeChatEventMessage.cs" />
+    <Compile Include="Models\WeChatJsonBase.cs" />
+    <Compile Include="Models\WeChatMaterial.cs" />
+    <Compile Include="Models\WeChatMenu.cs" />
+    <Compile Include="Models\WeChatQueryImageMessage.cs" />
+    <Compile Include="Models\WeChatReplyVideoMessage.cs" />
+    <Compile Include="Models\WeChatReplyVoiceMessage.cs" />
+    <Compile Include="Models\WeChatReplyImageMessage.cs" />
+    <Compile Include="Models\WeChatQueryLinkMessage.cs" />
+    <Compile Include="Models\WeChatQueryLocationMessage.cs" />
+    <Compile Include="Models\WeChatMedia.cs" />
+    <Compile Include="Models\WeChatMessage.cs" />
+    <Compile Include="Models\WeChatReplyMusicMessage.cs" />
+    <Compile Include="Models\WeChatReplyNewsMessage.cs" />
+    <Compile Include="Models\WeChatQueryShortVideoMessage.cs" />
+    <Compile Include="Models\WeChatQueryTextMessage.cs" />
+    <Compile Include="Models\WeChatQueryVideoMessage.cs" />
+    <Compile Include="Models\WeChatQueryVoiceMessage.cs" />
+    <Compile Include="Models\WeChatServerIP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\WeChatReplyTextMessage.cs" />
+    <Compile Include="RandomeGenerator.cs" />
+    <Compile Include="WeChatHelper.cs" />
+    <Compile Include="WeChatUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
